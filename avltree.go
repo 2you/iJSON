@@ -200,8 +200,8 @@ func (an *AvlNode) Insert(in *AvlNode) (rt *AvlNode, code int) {
 /*
 Remove
 删除元素
-*1、如果被删除结点只有一个子结点，就直接将A的子结点连至A的父结点上，并将A删除
-*2、如果被删除结点有两个子结点，将该结点右子数内的最小结点取代A。
+*1、如果被删除结点rt只有一个子结点，就直接用rt的左结点或者右结点取代rt
+*2、如果被删除结点rt有两个子结点，将该结点右子树内的最小结点取代rt，同时删除右子树内的最小节点。
 *3、平衡二叉树，重新设置高度
 */
 func (an *AvlNode) Remove(name string) (rt *AvlNode, code int) {
